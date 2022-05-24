@@ -1,0 +1,26 @@
+.container{
+    background-color: white;
+}
+.button-top {
+    display: inline-block;
+    position: relative;
+    color: #d1b200;
+    
+}
+.button-top:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #d16500;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .button-top:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+ 

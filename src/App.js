@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home/Home.jsx";
+import Books from "./Books/Books.jsx";
+import FavoriteBooks from "./FavoriteBooks/FavoriteBooks.jsx";
+import FindBook from "./FindBook/FindBook.jsx";
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Books" element={<Books />} />
+          <Route path="/FavoriteBooks" element={<FavoriteBooks />} />
+          <Route path="/FindBook" element={<FindBook />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
